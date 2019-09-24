@@ -1,14 +1,15 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import { Home, About } from './pages/index';
-import { Navbar } from './components/index';
+import { Home, About } from './pages';
+import { Navbar, Alert } from './components';
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
       <div className="container pt-4">
+        <Alert />
         <Switch>
           <Route path={'/'} exact component={Home} />
           <Route path={'/about'} exact component={About} />
